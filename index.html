@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+    <link href="./style.css" rel="stylesheet" />
+    <title>Morse Code Translator</title>
+  </head>
+  <body>
+    <div id="heading-div">
+      <h1 id="heading-green">MorseCode</h1>
+      <h1 id="heading-yellow">Translate</h1>
+    </div>
+    <h3>Please use / to separate words when writing in morse</h3>
+
+    <div id="translate-flex">
+      <h2 id="inputHeading"></h2>
+      <textarea id="inBox" placeholder="Enter text to translate..."></textarea>
+      <div buttonBox>
+        <button id="translateButton">Translate</button>
+        <button id="modeButton">Switch</button>
+      </div>
+      <h2 id="outputHeading"></h2>
+      <p id="outBox" placeholder="Translated text appears here"></p>
+    </div>
+  </body>
+</html>
