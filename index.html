@@ -17,20 +17,26 @@
   </head>
   <body>
     <div id="heading-div">
-      <h1 id="heading-green">MorseCode</h1>
-      <h1 id="heading-yellow">Translate</h1>
+      <h1 class="main-heading main-heading--green">MorseCode</h1>
+      <h1 class="main-heading main-heading--gold">Translate</h1>
     </div>
-    <h3>Please use / to separate words when writing in morse</h3>
+    <h3 id="subheading">
+      Please use / to separate words when writing in morse
+    </h3>
 
     <div id="translate-flex">
-      <h2 id="inputHeading"></h2>
-      <textarea id="inBox" placeholder="Enter text to translate..."></textarea>
+      <h2 id="inputHeading" class="box-heading"></h2>
+      <textarea
+        id="inBox"
+        class="translation-boxes"
+        placeholder="Enter text to translate..."
+      ></textarea>
       <div buttonBox>
         <button id="translateButton">Translate</button>
         <button id="modeButton">Switch</button>
       </div>
-      <h2 id="outputHeading"></h2>
-      <p id="outBox" placeholder="Translated text appears here"></p>
+      <h2 id="outputHeading" class="box-heading"></h2>
+      <p id="outBox" class="translation-boxes"></p>
     </div>
   </body>
 </html>
