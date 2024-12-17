@@ -1,58 +1,12 @@
+import { translateToMorse } from "./modules/translateToMorse.js";
+import { translateToEnglish } from "./modules/translateToEnglish.js";
+
 const outBox = document.querySelector("#outBox");
 const inBox = document.querySelector("#inBox");
 const translateButton = document.querySelector("#translateButton");
 const modeButton = document.querySelector("#modeButton");
 
 let mode = "textToMorse";
-
-const alphabet = {
-  A: ".-",
-  B: "-...",
-  C: "-.-.",
-  D: "-..",
-  E: ".",
-  F: "..-.",
-  G: "--.",
-  H: "....",
-  I: "..",
-  J: ".---",
-  K: "-.-",
-  L: ".-..",
-  M: "--",
-  N: "-.",
-  O: "---",
-  P: ".--.",
-  Q: "--.-",
-  R: ".-.",
-  S: "...",
-  T: "-",
-  U: "..-",
-  V: "...-",
-  W: ".--",
-  X: "-..-",
-  Y: "-.--",
-  Z: "--..",
-  " ": "/",
-};
-
-const reverseAlphabet = Object.fromEntries(
-  Object.entries(alphabet).map(([letter, morse]) => [morse, letter])
-);
-
-function translateToMorse(input) {
-  return input
-    .toUpperCase()
-    .split("")
-    .map((char) => alphabet[char] || "(?)")
-    .join(" ");
-}
-
-function translateToEnglish(input) {
-  return input
-    .split(" ")
-    .map((morse) => reverseAlphabet[morse] || "(?)")
-    .join("");
-}
 
 translateButton.addEventListener("click", () => {
   const input = inBox.value.trim();
